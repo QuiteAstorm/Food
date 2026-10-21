@@ -33,3 +33,11 @@ h1,h2,h3,.brand-home { font-family: 'Lobster', Georgia, cursive; }
 .category-label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 .category-arrow { flex: 0 0 auto; font-size: 1.4rem; }
 @media (max-width: 400px) { .category-grid { grid-template-columns: 1fr; } .category-thumbnail { width: 72px; height: 72px; flex-basis: 72px; } }
+
+/* Keep category names readable on narrow phones; never leave a lone letter. */
+.category-label { overflow-wrap: normal; word-break: normal; hyphens: none; }
+@media (max-width: 650px) {
+  .category-button { gap: .55rem; }
+  .category-label { font-size: clamp(.94rem, 3.9vw, 1.15rem); }
+  .category-arrow { font-size: 1.1rem; }
+}
