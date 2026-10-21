@@ -41,3 +41,14 @@ h1,h2,h3,.brand-home { font-family: 'Lobster', Georgia, cursive; }
   .category-label { font-size: clamp(.94rem, 3.9vw, 1.15rem); }
   .category-arrow { font-size: 1.1rem; }
 }
+
+/* Mobile menu tiles: fit full category words without splitting Appetizers. */
+.category-button { min-width: 0; }
+.category-label { overflow-wrap: normal !important; word-break: keep-all !important; hyphens: none !important; white-space: nowrap; font-size: clamp(.82rem, 2.8vw, 1.1rem); }
+.category-thumbnail { width: clamp(52px, 15vw, 66px); height: clamp(52px, 15vw, 66px); flex-basis: clamp(52px, 15vw, 66px); }
+.category-arrow { margin-left: auto; }
+@media (max-width: 400px) {
+  .category-button { gap: .4rem; padding: .45rem; }
+  .category-thumbnail { width: 62px; height: 62px; flex-basis: 62px; }
+  .category-label { font-size: clamp(.83rem, 3.5vw, 1rem); }
+}
