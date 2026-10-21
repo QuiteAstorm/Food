@@ -52,3 +52,6 @@ h1,h2,h3,.brand-home { font-family: 'Lobster', Georgia, cursive; }
   .category-thumbnail { width: 62px; height: 62px; flex-basis: 62px; }
   .category-label { font-size: clamp(.83rem, 3.5vw, 1rem); }
 }
+
+/* Clearly labeled access to the non-private draft menu editor. */
+.editor-preview-entry{margin:2rem auto 1rem;padding:1.25rem;width:min(100%,540px);box-sizing:border-box;border:3px solid #9d008f;border-radius:18px;background:#fff7c2;text-align:center;color:#60005c}.editor-preview-entry p{font-weight:700;margin:.25rem 0 .9rem}.editor-preview-entry .explore-button{display:inline-block;max-width:100%;white-space:normal}.editor-preview-entry small{display:block;margin-top:.85rem;font-size:.85rem;line-height:1.4}
