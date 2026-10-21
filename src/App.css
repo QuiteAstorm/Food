@@ -26,3 +26,10 @@ h1,h2,h3,.brand-home { font-family: 'Lobster', Georgia, cursive; }
 .category-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,190px),1fr)); gap: 1rem; margin: 1.5rem 0; }
 .category-button { min-height: 85px; display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
 @media (max-width:650px) { .landing-info { grid-template-columns: 1fr; } .landing-hero { min-height: 350px; } .landing-message { padding: .8rem; } .restaurant-header { justify-content: center; } .menu-section,.landing-info { margin: .7rem; } }
+
+/* Original menu photographs beside each category on the landing page. */
+.category-button { justify-content: flex-start; text-align: left; gap: .75rem; padding: .55rem; overflow: hidden; }
+.category-thumbnail { width: 66px; height: 66px; flex: 0 0 66px; object-fit: cover; border-radius: 12px; border: 2px solid #a500a5; background: #fff7d1; }
+.category-label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.category-arrow { flex: 0 0 auto; font-size: 1.4rem; }
+@media (max-width: 400px) { .category-grid { grid-template-columns: 1fr; } .category-thumbnail { width: 72px; height: 72px; flex-basis: 72px; } }
