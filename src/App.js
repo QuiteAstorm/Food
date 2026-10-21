@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuGallery from './components/MenuGallery';
+import MenuEditor from './components/MenuEditor';
 import { burritoItems } from './data/burritoItems';
 import { appaItems } from './data/appaItems';
 import { saladItems } from './data/saladItems';
@@ -23,6 +24,7 @@ const categories = [
 
 export default function App() {
   const [category, setCategory] = React.useState(null);
+  const [editorOpen, setEditorOpen] = React.useState(() => new URLSearchParams(window.location.search).get('editor') === 'preview');
   return (
     <div className="restaurant-app">
       <header className="restaurant-header">
@@ -32,7 +34,9 @@ export default function App() {
         </button>
         <span>Authentic Mexican Restaurant</span>
       </header>
-      {category ? (
+      {editorOpen ? (
+        <MenuEditor categories={categories} onExit={() => { setEditorOpen(false); window.history.replaceState(null, '', window.location.pathname); }} />
+      ) : category ? (
         <MenuGallery key={category.name} category={category.name}
           items={category.items} onBackToCategories={() => setCategory(null)} />
       ) : (
