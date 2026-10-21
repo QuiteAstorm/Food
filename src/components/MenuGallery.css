@@ -1,0 +1,11 @@
+.food-category { width: min(100%, 1100px); margin: 0 auto; padding: 1rem; box-sizing: border-box; }
+.food-category__header { text-align: center; }
+.food-back { display: inline-block; margin: 0.5rem 0 1rem; padding: .7rem 1rem; border: 2px solid #8a178e; border-radius: 12px; background: #ffe550; color: #5b0861; font: inherit; cursor: pointer; }
+.food-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 1rem; }
+.food-tile { min-width: 0; padding: .5rem; border: 3px solid #bf21a6; border-radius: 16px; background: #fff3b3; color: #65106d; font: inherit; cursor: pointer; }
+.food-tile img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block; }
+.food-tile span { display: block; padding: .5rem; }
+.food-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; background: #fff8cc; border: 3px solid #b52da8; border-radius: 18px; padding: 1rem; }
+.food-detail img { width: 100%; max-height: 420px; object-fit: contain; border-radius: 12px; }
+.food-detail__text { overflow-wrap: anywhere; }
+@media (max-width: 600px) { .food-detail { grid-template-columns: 1fr; } .food-category { padding: .65rem; } }
