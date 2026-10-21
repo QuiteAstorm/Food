@@ -79,6 +79,11 @@ export default function App() {
               ))}
             </div>
             <p>More original menu categories are being restored.</p>
+            <div className="editor-preview-entry">
+              <p>Working on menu descriptions or prices?</p>
+              <button type="button" className="explore-button" onClick={() => { setEditorOpen(true); window.history.replaceState(null, '', window.location.pathname + '?editor=preview'); window.scrollTo(0, 0); }}>Open Menu Editor Preview ✎</button>
+              <small>Practice editor only — not private and does not publish changes.</small>
+            </div>
           </section>
         </main>
       )}
