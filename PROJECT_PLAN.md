@@ -129,3 +129,12 @@ The Juan's El Caporal restoration should become the first example of a reusable,
 Strong preference for bright colors, rich imagery, decorative design, and mobile-friendly presentation. User works primarily on an Android phone. Keep instructions simple and do the GitHub changes directly where possible.
 
 **Do not claim future dashboard, database, or ordering features are implemented.**
+
+
+## Session handoff — October 21, 2026
+- User confirmed the **Appetizers** word-wrap problem is fixed, and food images and tap-to-detail interactions look good. Preserve this visual design and navigation.
+- The menu editor preview is reachable from a button **below the category grid on the homepage**, or via https://quiteastorm.github.io/Food/?editor=preview . The editor is explicitly **not private** and **does not publish** changes to the live menu.
+- Editor supports browser-local autosaved drafts, JSON download/import, and clear drafts. User requested owner ability to add new dishes within existing categories **and create new categories** (e.g. Mixed Drinks). Implemented both in `src/components/MenuEditor.js`, with mobile styling in `src/components/MenuEditor.css`. Latest related commit: `6f9967ceef8dc16b37fbe9d0b6f74ce3c833459b`. **Verify GitHub Pages deployment and test this functionality on a phone before claiming it is live.**
+- The user is interested in food and baking, including handmade pasta, bread, strudel, and cream puffs with pastry cream and chocolate. This informs their vision for customizable restaurant and bakery sites, but do not bring up personal details unnecessarily.
+- Next development priorities: verify category/item creation and JSON backup/import, correct any bugs, then design secure authentication and permanent database-backed CRUD/publishing. Do not claim private access, backend, MongoDB, or ordering are working.
+- User is taking a break and asked for a reliable stopping point. Be warm and patient when they return; do not imply any background work is happening.
