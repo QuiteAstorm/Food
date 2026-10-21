@@ -11,14 +11,14 @@ import { breakItems } from './data/breakItems';
 import './App.css';
 
 const categories = [
-  { name: 'Appetizers', items: appaItems },
-  { name: 'Salads', items: saladItems },
-  { name: 'Soups', items: soupItems },
-  { name: 'Seafood', items: seafoodItems },
-  { name: 'Chicken', items: polloItems },
-  { name: 'Burritos & favorites', items: burritoItems },
-  { name: 'Desserts', items: dessItems },
-  { name: 'Breakfast', items: breakItems },
+  { name: 'Appetizers', items: appaItems, previewIndex: 0 },
+  { name: 'Salads', items: saladItems, previewIndex: 0 },
+  { name: 'Soups', items: soupItems, previewIndex: 0 },
+  { name: 'Seafood', items: seafoodItems, previewIndex: 3 },
+  { name: 'Chicken', items: polloItems, previewIndex: 4 },
+  { name: 'Burritos & favorites', items: burritoItems, previewIndex: 3 },
+  { name: 'Desserts', items: dessItems, previewIndex: 1 },
+  { name: 'Breakfast', items: breakItems, previewIndex: 1 },
 ];
 
 export default function App() {
@@ -67,7 +67,10 @@ export default function App() {
               {categories.map((entry) => (
                 <button key={entry.name} className="category-button" type="button"
                   onClick={() => setCategory(entry)}>
-                  {entry.name} <span aria-hidden="true">→</span>
+                  <img className="category-thumbnail" src={entry.items[entry.previewIndex].image}
+                    alt="" loading="lazy" />
+                  <span className="category-label">{entry.name}</span>
+                  <span className="category-arrow" aria-hidden="true">→</span>
                 </button>
               ))}
             </div>
