@@ -73,3 +73,30 @@ This file is a planning record, not a claim that future backend features are alr
 
 ## Deployment troubleshooting
 - A prior rerun produced two artifacts with the same `github-pages` name in one workflow run, causing `actions/deploy-pages` to fail. A fresh push creates a new workflow run; avoid rerunning only the deploy job on the affected run.
+
+
+## Long-term product vision: reusable restaurant website platform
+The Juan's El Caporal restoration should become the first example of a reusable, configurable restaurant website platform for many cuisines and restaurant types (Mexican, Italian, Chinese, barbecue, seafood, etc.).
+
+### Owner-customizable branding and content
+- Choose from colorful themed designs, including cuisine-inspired themes, or customize colors, backgrounds, typography and layouts.
+- Upload the restaurant's own logo, food photos and other branding.
+- Configure restaurant name, contact details, business hours and dine-in/takeout information.
+- Add, edit, reorder and hide menu categories and dishes, with photos, descriptions, prices and availability.
+- Make most website changes through a private dashboard rather than code edits.
+
+### Shared optional business features
+- Owner-controlled online ordering toggle.
+- Secure owner/staff dashboard, customer/order management and reporting.
+- Manual and recipe-based automatic inventory management, with independent settings.
+- Optional payment processing and future POS integrations.
+
+### Product architecture considerations
+- Separate shared template/components and configuration from each restaurant's private data.
+- Plan for multiple restaurants (multi-tenant isolation) if this becomes a hosted product.
+- Ensure secure per-restaurant authentication, data isolation, authorization and backups.
+- Offer a way to deploy or host each restaurant's website with its own branding and domain.
+- Keep the Juan's El Caporal original design and source intact as the flagship example.
+- Consider naming and packaging the reusable platform after the Juan's frontend is stable.
+
+**Status:** This is an agreed future product direction, not yet implemented. Prioritize finishing and testing Juan's El Caporal before generalizing it.
