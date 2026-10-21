@@ -1,10 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * { box-sizing: border-box; }
-body { margin: 0; font-family: Georgia, serif; color: #561261; background: linear-gradient(160deg,#f44236 0%,#ffef61 48%,#48bd4c 100%); min-height: 100vh; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Georgia, serif; color: #53115c; background: linear-gradient(180deg,#f51b26 0%,#fff200 52%,#1e9600 100%); min-height: 100vh; }
 button { touch-action: manipulation; }
-.restaurant-header { text-align: center; background: #ffe456; padding: 1rem; border-bottom: 5px solid #ad1db1; }
-.restaurant-header h1 { margin: 0; }
-.restaurant-home { text-align: center; max-width: 800px; margin: 2rem auto; padding: 1rem; background: #fff5c8; border-radius: 16px; }
-.category-button { border: 3px solid #9a168f; border-radius: 12px; background: #e9a2eb; color: #4a0754; padding: 1rem 1.5rem; font: inherit; font-size: 1.2rem; cursor: pointer; }
-
-.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
-.category-button { width: 100%; min-height: 84px; }
+h1,h2,h3,.brand-home { font-family: 'Lobster', Georgia, cursive; }
+.restaurant-app { min-height: 100vh; border: clamp(5px,2vw,18px) ridge #8e00a8; }
+.restaurant-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; padding: .8rem clamp(.8rem,3vw,2rem); background: #0afcab; border-bottom: 5px solid #a00d9b; }
+.brand-home { background: transparent; border: 0; color: #8d00ad; font-size: clamp(1.5rem,4vw,2.4rem); cursor: pointer; }
+.restaurant-header span { color: #7b067f; font-weight: bold; }
+.restaurant-home { max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 0 2rem; }
+.landing-hero { position: relative; display: grid; justify-items: center; gap: 1rem; padding: clamp(1.5rem,5vw,4rem) 1rem; background: linear-gradient(#2b0a3380,#2b0a3380),url('https://raw.githubusercontent.com/QuiteAstorm/Juans-El-Caporal/master/src/components/mexican.jpg') center/cover; min-height: 440px; }
+.landing-logo { display: block; width: min(100%,580px); max-height: 240px; object-fit: contain; filter: drop-shadow(0 4px 10px #28052a); }
+.landing-message { background: #b6ff24ed; border: 6px solid #fff200; border-radius: 24px; padding: 1rem 1.5rem; box-shadow: 0 8px 25px #210e2570; }
+.landing-message h1 { color: #b80095; font-size: clamp(2rem,5vw,3.4rem); margin: .2rem 0; }
+.landing-message p { color: #143fba; font-size: clamp(1.3rem,3vw,2rem); margin: .5rem 0 1rem; font-weight: bold; }
+.explore-button,.category-button { background: #0afcab; color: #760090; border: 3px solid #a500a5; border-radius: 14px; font: inherit; font-weight: bold; padding: .8rem 1.2rem; cursor: pointer; }
+.explore-button:hover,.category-button:hover { background: #fff200; }
+.landing-info { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 1.5rem; margin: 1.2rem; padding: 1.3rem; background: #fff6b9; border: 5px solid #a500a5; border-radius: 22px; }
+.landing-phone { max-width: 100%; max-height: 180px; object-fit: contain; margin: auto; }
+.landing-hours h2 { color: #9c008f; margin: .2rem 0; }
+.landing-hours p { margin: .4rem 0; }
+.landing-hours small { display: block; font-size: .75rem; margin-top: .7rem; }
+.menu-section { background: #d5ff69; border: 5px solid #a500a5; border-radius: 22px; padding: 1.5rem; margin: 1.2rem; }
+.menu-section h2 { font-size: clamp(2rem,4vw,3rem); margin: 0; }
+.category-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,190px),1fr)); gap: 1rem; margin: 1.5rem 0; }
+.category-button { min-height: 85px; display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+@media (max-width:650px) { .landing-info { grid-template-columns: 1fr; } .landing-hero { min-height: 350px; } .landing-message { padding: .8rem; } .restaurant-header { justify-content: center; } .menu-section,.landing-info { margin: .7rem; } }
