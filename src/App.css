@@ -5,3 +5,6 @@ button { touch-action: manipulation; }
 .restaurant-header h1 { margin: 0; }
 .restaurant-home { text-align: center; max-width: 800px; margin: 2rem auto; padding: 1rem; background: #fff5c8; border-radius: 16px; }
 .category-button { border: 3px solid #9a168f; border-radius: 12px; background: #e9a2eb; color: #4a0754; padding: 1rem 1.5rem; font: inherit; font-size: 1.2rem; cursor: pointer; }
+
+.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.category-button { width: 100%; min-height: 84px; }
