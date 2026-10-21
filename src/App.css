@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, serif; color: #561261; background: linear-gradient(160deg,#f44236 0%,#ffef61 48%,#48bd4c 100%); min-height: 100vh; }
+button { touch-action: manipulation; }
+.restaurant-header { text-align: center; background: #ffe456; padding: 1rem; border-bottom: 5px solid #ad1db1; }
+.restaurant-header h1 { margin: 0; }
+.restaurant-home { text-align: center; max-width: 800px; margin: 2rem auto; padding: 1rem; background: #fff5c8; border-radius: 16px; }
+.category-button { border: 3px solid #9a168f; border-radius: 12px; background: #e9a2eb; color: #4a0754; padding: 1rem 1.5rem; font: inherit; font-size: 1.2rem; cursor: pointer; }
