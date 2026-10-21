@@ -126,7 +126,7 @@ export default function MenuEditor({ categories, onExit }) {
         });
         const edits = {};
         for (const [id, record] of Object.entries(parsed.edits)) {
-          if (!/^[^:]+:\\d+$/.test(id) && !/^new-[a-z0-9-]+$/.test(id)) throw new Error('Invalid dish ID.');
+          if (!/^[^:]+:\d+$/.test(id) && !/^new-[a-z0-9-]+$/.test(id)) throw new Error('Invalid dish ID.');
           edits[id] = safeRecord(record);
         }
         imported = { edits, additions, groups };
