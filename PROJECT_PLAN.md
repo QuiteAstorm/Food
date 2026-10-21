@@ -100,3 +100,32 @@ The Juan's El Caporal restoration should become the first example of a reusable,
 - Consider naming and packaging the reusable platform after the Juan's frontend is stable.
 
 **Status:** This is an agreed future product direction, not yet implemented. Prioritize finishing and testing Juan's El Caporal before generalizing it.
+
+
+## Session handoff — October 20, 2026 (end of evening)
+**Current status:** Juan's El Caporal is published at https://quiteastorm.github.io/Food/ . The user likes the restored colorful homepage and the small original food photos beside the eight category buttons.
+
+### Completed tonight
+- Recreated colorful original landing-page styling, logo, background, contact/hours section, and category grid.
+- Added representative original food photos to each category button. User confirmed visually that they look beautiful.
+- Enhanced MenuGallery: selecting a dish opens its detail and Back returns to that category; category-local search; missing-image fallback; colorful mobile-responsive tiles.
+- Recorded long-term vision for a reusable restaurant website platform customizable for Mexican, Italian, Chinese, and other restaurants.
+
+### Last code change / verify first tomorrow
+- Commit `b8efa45a6edbfa10d4bbb5edce86080e089f1c1b` updated `src/App.css` to keep the word **Appetizers** together on one line on narrow phone screens, with adjusted thumbnail and text sizing.
+- **Deployment and visual outcome of this last fix have NOT yet been verified.** Check the latest GitHub Actions run, then ask user whether the S still wraps on their phone. Avoid assuming the issue is resolved.
+- Site: https://quiteastorm.github.io/Food/
+- Actions: https://github.com/QuiteAstorm/Food/actions
+
+### Next practical steps
+1. Verify the latest deployment and the Appetizers label on the user's phone; if necessary, fix grid sizing rather than only text wrapping.
+2. Test category > photo > detail > back-to-same-category navigation and category search.
+3. Check broken/missing food images; recover accurate descriptions and prices from the original restaurant materials, without guessing.
+4. Polish remaining menu pages and accessibility.
+5. Begin secure owner dashboard and backend/database work in stages, only after frontend is stable. Owner wants MongoDB, optional ordering, both automatic and manual inventory, and owner-controlled settings.
+6. Eventually extract reusable themes/configuration into a multi-restaurant template; preserve the original restaurant repo.
+
+### User preference
+Strong preference for bright colors, rich imagery, decorative design, and mobile-friendly presentation. User works primarily on an Android phone. Keep instructions simple and do the GitHub changes directly where possible.
+
+**Do not claim future dashboard, database, or ordering features are implemented.**
