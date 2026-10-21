@@ -70,3 +70,6 @@ Restore the original colorful, mobile-friendly Juan's El Caporal restaurant webs
 - Order fulfillment rules, cancellation behavior, POS integration and hosting budget.
 
 This file is a planning record, not a claim that future backend features are already built.
+
+## Deployment troubleshooting
+- A prior rerun produced two artifacts with the same `github-pages` name in one workflow run, causing `actions/deploy-pages` to fail. A fresh push creates a new workflow run; avoid rerunning only the deploy job on the affected run.
